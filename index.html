@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WanderStore Malawi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header with Search Bar -->
+  <header>
+    <h1>📱 WanderStore</h1>
+    
+  <!-- 🔘 Categories -->
+  <div id="categories">
+    <button onclick="filterApps('All')">Zonse</button>
+    <button onclick="filterApps('Edit')">Edit</button>
+    <button onclick="filterApps('Chat')">Chat</button>
+    <button onclick="filterApps('Maphunziro')">Maphunziro</button>
+    <button onclick="filterApps('Games')">Games</button>
+  </div>
+
+    
+    <input
+      type="text"
+      id="searchBar"
+      placeholder="Saka app..."
+      oninput="searchApps()"
+    >
+  </header>
+    <h2>🌟 Featured Apps</h2>
+  <!-- 📱 Main App List -->
+  <main id="appList">
+    <div class="app-card" data-category="Chat">
+      <h2>Wanderslapp</h2>
+      <div class="app-row">
+        <img src="images/logo.jpeg" alt="Wanderslapp">
+        <a
+          href="https://archive.org/download/wanderslapp/wanderslapp.apk"
+          download
+          class="download-btn"
+        >Download App</a>
+        <button
+          class="info-btn"
+          onclick="showInfo(
+            'Wanderslapp',
+            '30.2MB',
+            'App yothandiza pa kucheza.<br>Kumvera nyimbo.<br>Kuonera vidiyo.<br>Yothandiza pa ma group ndi ma chat a Malawi.'
+          )"
+        >See Info</button>
+      </div>
+    </div>
+    
+    <div class="app-card" data-category="Chat">
+      <h2>WanderStore</h2>
+      <div class="app-row">
+        <img src="images/logo1.jpeg" alt="Wanderslapp">
+        <a
+          href="https://archive.org/download/wanderslapp/wanderslapp.apk"
+          download
+          class="download-btn"
+        >Download App</a>
+        <button
+          class="info-btn"
+          onclick="showInfo(
+            'Wanderslapp',
+            '30.2MB',
+            'App yothandiza pa kucheza.<br>Kumvera nyimbo.<br>Kuonera vidiyo.<br>Yothandiza pa ma group ndi ma chat a Malawi.'
+          )"
+        >See Info</button>
+      </div>
+    </div>
+
+    <div class="app-card" data-category="Maphunziro">
+      <h2>EduZone</h2>
+      <div class="app-row">
+        <img src="images/eduzone.jpg" alt="EduZone">
+        <a
+          href="https://example.com/eduzone.apk"
+          download
+          class="download-btn"
+        >Download App</a>
+        <button
+          class="info-btn"
+          onclick="showInfo(
+            'EduZone',
+            '12.5MB',
+            'App yophunzira masamu.<br>Biology ndi geography.<br>Yokhala ndi ma quiz ndi ma notes.<br>Yothandiza ana a sekondale.'
+          )"
+        >See Info</button>
+      </div>
+    </div>
+
+    <div class="app-card" data-category="Edit">
+      <h2>PhotoFix</h2>
+      <div class="app-row">
+        <img src="images/photofix.jpg" alt="PhotoFix">
+        <a
+          href="https://example.com/photofix.apk"
+          download
+          class="download-btn"
+        >Download App</a>
+        <button
+          class="info-btn"
+          onclick="showInfo(
+            'PhotoFix',
+            '18MB',
+            'App yokonza zithunzi.<br>Imakhala ndi crop, filter, ndi stickers.<br>Yothandiza pa ma profile ndi ma ID.'
+          )"
+        >See Info</button>
+      </div>
+    </div>
+
+    <div class="app-card" data-category="Games">
+      <h2>JumpRun</h2>
+      <div class="app-row">
+        <img src="images/jumprun.jpg" alt="JumpRun">
+        <a
+          href="https://example.com/jumprun.apk"
+          download
+          class="download-btn"
+        >Download App</a>
+        <button
+          class="info-btn"
+          onclick="showInfo(
+            'JumpRun',
+            '22MB',
+            'Game yosangalatsa.<br>Kuthamanga ndi kulephela.<br>Yoyenera ana ndi achinyamata.<br>Imagwira offline.'
+          )"
+        >See Info</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ℹ️ Info Modal -->
+  <div id="infoModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p><strong>Kukula:</strong> <span id="modalSize"></span></p>
+      <p><strong>Mafotokozedwe:</strong><br><span id="modalDesc"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
